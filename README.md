@@ -98,8 +98,6 @@ Threshold-Based Classification
 
 ---
 ## 👥 Contributors
-*(Click names to visit GitHub profiles)*
-
 - [Atharva Garg (Team Leader)](https://github.com/atharvagarg2007)
 - [Anirudh Gowri Sankaran](https://github.com/anirudh5-creator)
 - [Joel Jose Manoj](https://github.com/Joel5799)
