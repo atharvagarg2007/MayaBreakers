@@ -1,7 +1,5 @@
-import os
 import clip
 import torch
-import numpy as np
 from PIL import Image
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -12,4 +10,5 @@ def get_embedding(path):
     with torch.no_grad():
         emb = model.encode_image(img)
         emb = emb / emb.norm(dim=-1, keepdim=True)
-    return emb.cpu().numpy()[0].astype("float32")
+    return emb.cpu().numpy()[0]
+
