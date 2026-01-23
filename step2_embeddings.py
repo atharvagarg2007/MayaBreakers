@@ -12,18 +12,4 @@ def get_embedding(path):
     with torch.no_grad():
         emb = model.encode_image(img)
         emb = emb / emb.norm(dim=-1, keepdim=True)
-    return emb.cpu().numpy()[0]
-
-# Load originals
-orig_dir = "data/originals"
-orig_embeddings = []
-orig_ids = []
-
-for file in os.listdir(orig_dir):
-    path = os.path.join(orig_dir, file)
-    orig_embeddings.append(get_embedding(path))
-    orig_ids.append(file.split(".")[0])
-
-orig_embeddings = np.array(orig_embeddings)
-
-print("Original embeddings shape:", orig_embeddings.shape)
+    return emb.cpu().numpy()[0].astype("float32")
