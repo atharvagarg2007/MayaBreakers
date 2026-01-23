@@ -24,7 +24,7 @@ embeddings = []
 image_ids = []
 phash_db = {}
 
-print("🔄 Starting offline preprocessing...")
+print("Starting offline preprocessing...")
 
 for img_name in os.listdir(DATA_DIR):
     if not img_name.lower().endswith((".jpg", ".jpeg", ".png")):
@@ -33,12 +33,12 @@ for img_name in os.listdir(DATA_DIR):
     img_path = os.path.join(DATA_DIR, img_name)
     print(f"Processing: {img_name}")
 
-    # 1️⃣ pHash
+    # pHash
     img = Image.open(img_path).convert("RGB")
     phash_db[img_name] = imagehash.phash(img)
 
-    # 2️⃣ CLIP embedding
-    emb = get_embedding(img_path)   # (512,)
+    # CLIP embedding
+    emb = get_embedding(img_path)
     embeddings.append(emb)
     image_ids.append(img_name)
 
@@ -47,10 +47,8 @@ embeddings = np.array(embeddings).astype("float32")
 print("Total images indexed:", len(image_ids))
 print("Embedding shape:", embeddings.shape)
 
-
 index = faiss.IndexFlatIP(EMBEDDING_DIM)
 index.add(embeddings)
-
 
 faiss.write_index(index, FAISS_INDEX_PATH)
 
@@ -60,7 +58,7 @@ with open(IMAGE_IDS_PATH, "w") as f:
 with open(PHASH_DB_PATH, "wb") as f:
     pickle.dump(phash_db, f)
 
-print("✅ Offline preprocessing complete")
+print("Offline preprocessing complete")
 print("Saved files:")
 print(" -", FAISS_INDEX_PATH)
 print(" -", IMAGE_IDS_PATH)
