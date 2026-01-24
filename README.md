@@ -88,14 +88,13 @@ Threshold-Based Classification
 - Scalable and modular architecture
 - Model-agnostic embedding pipeline
 - Designed for real-world, large-scale platforms
-
+- Made a UI for this project
 ---
 
 ## 📊 Evaluation Metrics
 - Precision and Recall for duplicate detection
 - False positive and false negative rates
 - Embedding similarity distribution analysis
-
 ---
 ## 👥 Contributors
 - [Atharva Garg (Team Leader)](https://github.com/atharvagarg2007)
