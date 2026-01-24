@@ -76,7 +76,7 @@ class MainWindow(QMainWindow):
 
         if is_dup:
             self.result_label.setText(
-                f"DUPLICATE\nMatched with: {matched}\nSimilarity: {similarity:.3f}"
+                f"DUPLICATE IMAGE\nMatched with: {matched}\nSimilarity: {similarity:.3f}"
             )
             self.result_label.setStyleSheet("color: red; font-size: 30px; font-weight: bold;")
         else:
