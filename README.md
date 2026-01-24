@@ -88,7 +88,7 @@ Threshold-Based Classification
 - Scalable and modular architecture
 - Model-agnostic embedding pipeline
 - Designed for real-world, large-scale platforms
-
+- Made a UI for this project
 ---
 
 ## 📊 Evaluation Metrics
