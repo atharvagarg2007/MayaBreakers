@@ -96,6 +96,13 @@ Threshold-Based Classification
 - False positive and false negative rates
 - Embedding similarity distribution analysis
 
+-- A Demo is Shown below
+### Unique Image
+![Unique Image](Demo/WhatsApp Image 2026-01-24 at 09.33.44.jpeg")
+
+### Duplicate Image
+![Duplicate Image](Demo/WhatsApp Image 2026-01-24 at 09.40.07.jpeg")
+
 ---
 ## 👥 Contributors
 - [Atharva Garg (Team Leader)](https://github.com/atharvagarg2007)
